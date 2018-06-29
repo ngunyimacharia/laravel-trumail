@@ -12,13 +12,12 @@
     }
   ],
 
-  "require": {
-    "laravel/framework": "^5.5.0",
-    "fzaninotto/faker": "^1.7"
-  },
+  "require": {},
 
   "require-dev":{
-    "orchestra/testbench": "^3.4"
+    "orchestra/testbench": "^3.4",
+    "phpunit/phpunit": "^7.2",
+    "fzaninotto/faker": "^1.7"
   },
 
   "autoload": {
