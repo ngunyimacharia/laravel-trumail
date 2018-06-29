@@ -50,7 +50,7 @@ class TrumailResponse{
       $return = $error_responses['host'];
     }
 
-    return ($return ?: true);
+    return (isset($return) ? $return : true);
   }
 
 }
