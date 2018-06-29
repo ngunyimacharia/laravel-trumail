@@ -24,7 +24,7 @@ class TrumailServiceProvider extends ServiceProvider
 
     // Copy config file to laravel project
     $this->publishes([
-        __DIR__.'../config/trumail.php' => config_path('trumail.php'),
+        __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'trumail.php' => config_path('trumail.php'),
     ]);
 
   }
@@ -36,10 +36,12 @@ class TrumailServiceProvider extends ServiceProvider
   */
   public function register()
   {
+    //Set path of local config
+    $local_config = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'trumail.php';
 
     //Set config file
     if ($this->app['config']->get('trumail') === null) {
-      $this->app['config']->set('trumail', require __DIR__.'/./../config/trumail.php');
+      $this->app['config']->set('trumail', require $local_config);
     }
 
     //Set service
