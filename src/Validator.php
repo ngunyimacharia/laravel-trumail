@@ -1,19 +1,26 @@
 <?php
 namespace Mashytski\Trumail;
 
-use stdClass;
-
 class Validator{
 
-  protected $api_url = "https://api.trumail.io/";
-  protected $api_version = "v2";
-  protected $api_token = "8ddb6adf-c9af-487b-aeaf-cc61b742c871";
+  protected $api_url;
+  protected $api_version;
+  protected $api_token;
+
+  public function __construct(){
+    $this->api_url = "https://api.trumail.io/";
+    $this->api_version = "v2";
+    $this->api_token = config('trumail.token');
+    if(is_null($this->api_token) || (!strlen($this->api_token)) || empty($this->api_token)){
+      abort(401,"Trumail token not set");
+    }
+  }
 
 
   /**
   * Function to check whether an email is valid or not
   */
-  public function validate($email = 'email@example.com'){
+  public function validate($email){
     $url  = $this->api_url.$this->api_version."/lookups/json?";
     $url .= "email=".$email;
     $url .= "&token=".$this->api_token;
@@ -37,14 +44,17 @@ class Validator{
       CURLOPT_CUSTOMREQUEST => "GET",
     ));
     $response = curl_exec($curl);
+    $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
     $err = curl_error($curl);
     curl_close($curl);
 
-    if ($err) {
-      return ['status'=>0,'response'=> $err];
-    } else {
-      return ['status'=>1,'response'=> json_decode($response)];
-    }
+    return (new TrumailResponse($httpcode,$response,$err));
   }
 
+  /**
+  * Function to check if email is valid based on response
+  */
+  private function checkValid($response){
+    return ($response->validFormat && $response->deliverable && (!$response->fullInbox) && $response->hostExists) ? true : false;
+  }
 }

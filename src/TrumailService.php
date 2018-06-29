@@ -7,10 +7,10 @@ class TrumailService {
      * @param $email string   The email to be verified
      * @return \Mashytski\Trumail\Validator
      */
-    public function validate($email = "email@example.com")
+    public function validate($email)
     {
         $validator = new Validator();
 
-        return $validator->validate();
+        return $validator->validate($email);
     }
 }
