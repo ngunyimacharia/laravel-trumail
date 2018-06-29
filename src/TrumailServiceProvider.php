@@ -39,7 +39,7 @@ class TrumailServiceProvider extends ServiceProvider
 
     //Set config file
     if ($this->app['config']->get('trumail') === null) {
-      $this->app['config']->set('trumail', require __DIR__.'/../config/trumail.php');
+      $this->app['config']->set('trumail', require __DIR__.'/./../config/trumail.php');
     }
 
     //Set service
