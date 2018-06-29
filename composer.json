@@ -1,0 +1,26 @@
+{
+  "name": "mashytski/trumail",
+  "description": "Package to enable email validation through trumail.io API's",
+  "version": "1.0.0",
+  "keywords": ["Mashytski","Laravel","Trumail"],
+  "homepage": "https://gitlab.com/Mashytski",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Kelvin Macharia",
+      "email": "ngunyimacharia@gmail.com"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.4.0"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Mashytski\\Trumail\\": "/src"
+    }
+  }
+
+}
