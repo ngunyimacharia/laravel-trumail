@@ -1,17 +1,9 @@
 <?php
 namespace Mashytski\Trumail\Tests;
-
 use Trumail;
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
-class TrumailTest extends OrchestraTestCase
+class TrumailTest extends TestCase
 {
-
-  protected function getEnvironmentSetUp($app)
-  {
-    $dotenv = new \Dotenv\Dotenv(__DIR__.'\..');
-    $dotenv->load();
-  }
 
   protected function getPackageProviders($app)
   {
