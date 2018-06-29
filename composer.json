@@ -1,22 +1,27 @@
 {
   "name": "mashytski/trumail",
   "description": "Laravel package to enable email validation through trumail.io API's",
-  "version": "1.0.0",
+  "version": "1.0.0-dev",
   "keywords": ["Mashytski","Laravel","Trumail"],
   "homepage": "https://gitlab.com/mashytski",
   "license": "MIT",
   "authors": [
     {
       "name": "Kelvin Macharia",
-      "email": "ngunyimacharia@gmail.com"
+      "email": "ngunyimacharia@gmail.com",
+      "homepage":"https://gitlab.com/mashytski",
+      "role": "Developer"
     }
   ],
-  "config": {
-      "platform": {
-          "php": "7.0.0"
-      }
+
+  "support": {
+    "email": "ngunyimacharia@gmail.com",
+    "issues": "https://gitlab.com/mashytski/laravel-trumail/issues"
   },
-  "require": {},
+
+  "require": {
+      "php" : "^7.0"
+  },
 
   "require-dev":{
     "orchestra/testbench": "^3.4",
