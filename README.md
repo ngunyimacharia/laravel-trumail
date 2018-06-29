@@ -1,10 +1,7 @@
 mashytski/trumail
 ================
 
-[![Latest Version on Packagist](https://img.shields.io/travis/mashytski/trumail.svg?style=flat-square)](https://packagist.org/packages/mashytski/trumail)
-[![Packagist](https://img.shields.io/packagist/l/mashytski/trumail.svg?style=flat-square)](https://packagist.org/packages/mashytski/trumail)
-[![Total Downloads](https://img.shields.io/packagist/dt/mashytski/trumail.svg?style=flat-square)](https://packagist.org/packages/mashytski/trumail)
-[![Packagist](https://img.shields.io/packagist/v/mashytski/trumail.svg?style=flat-square)](https://packagist.org/packages/mashytski/trumail)
+[![License](https://img.shields.io/packagist/l/mashytski/trumail.svg?style=flat-square)](https://packagist.org/packages/mashytski/trumail)
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/mashytski/trumail.svg?style=flat-square)](https://packagist.org/packages/mashytski/trumail)
 
 
@@ -12,10 +9,10 @@ Custom PHP Library for Laravel 5 - developed by [ngunyimacharia](https://gitlab.
 
 The package provides an easy interface for validating emails from your Laravel web application. The package provides a simple method of checking whether emails are valid or not. Additionally, the returned response is filtered to provide formatted data ready for rendering to the user. This makes it easier to validate emails quickly while making your code more comprehensive.
 
- 
 
- > Note before posting an issue: When posting an issue for the package, always be sure to provide as much information 
- > regarding the request as possible. 
+
+ > Note before posting an issue: When posting an issue for the package, always be sure to provide as much information
+ > regarding the request as possible.
 
 
 
@@ -132,11 +129,11 @@ In order to validate an email address, you need to use the validate() method tha
 
 ### Validation Response
 
-By default, the Trumail::validate() method will always return a TrumailResponse object. 
+By default, the Trumail::validate() method will always return a TrumailResponse object.
 
 The follow are the responses to expect:
 
-__1. Invalid API Token Provided__ 
+__1. Invalid API Token Provided__
 
 ```php
 TrumailResponse {
@@ -220,11 +217,9 @@ This package is open-sourced software licensed under the [MIT license](http://op
 
 For package questions, bug, suggestions and/or feature requests, please use the Gitlab issue system and/or submit a pull request. When submitting an issue, always provide a detailed explanation of your problem, any response or feedback your get, log messages that might be relevant as well as a source code example that demonstrates the problem. If not, I will most likely not be able to help you with your problem. Please review the [contribution guidelines](https://gitlab.com/mashytski/laravel-trumail/blob/master/CONTRIBUTING.md) before submitting your issue or pull request.
 
-For any other questions, feel free to use the credentials listed below: 
+For any other questions, feel free to use the credentials listed below:
 
 Kelvin Macharia (developer)
 
 - Email: ngunyimacharia@gmail.com
 - Telephone: (+254)726 832329
-
-
