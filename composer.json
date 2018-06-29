@@ -3,7 +3,7 @@
   "description": "Package to enable email validation through trumail.io API's",
   "version": "1.0.0",
   "keywords": ["Mashytski","Laravel","Trumail"],
-  "homepage": "https://gitlab.com/Mashytski",
+  "homepage": "https://gitlab.com/mashytski",
   "license": "MIT",
   "minimum-stability": "dev",
   "authors": [
