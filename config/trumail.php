@@ -1,5 +1,8 @@
 <?php
 
+$dotenv = new \Dotenv\Dotenv(__DIR__.'\..\..\..\..\.');
+$dotenv->load();
+$dotenv->required('TRUMAIL_TOKEN');
 return [
 
   /*
