@@ -5,7 +5,6 @@
   "keywords": ["Mashytski","Laravel","Trumail"],
   "homepage": "https://gitlab.com/mashytski",
   "license": "MIT",
-  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Kelvin Macharia",
